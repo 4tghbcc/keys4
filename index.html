@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивный Калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">🧮 Интерактивный Калькулятор</h1>
+            <p class="subtitle">Произведите математические операции с двумя числами</p>
+        </header>
+
+        <main class="calculator">
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <label for="number1" class="input-label">Первое число</label>
+                    <input 
+                        type="text" 
+                        id="number1" 
+                        class="number-input"
+                        placeholder="Введите число"
+                        autocomplete="off"
+                    >
+                </div>
+                
+                <div class="input-wrapper">
+                    <label for="number2" class="input-label">Второе число</label>
+                    <input 
+                        type="text" 
+                        id="number2" 
+                        class="number-input"
+                        placeholder="Введите число"
+                        autocomplete="off"
+                    >
+                </div>
+            </div>
+
+            <div class="operations-grid">
+                <button class="operation-btn" data-operation="sum">
+                    <span class="btn-icon">➕</span>
+                    <span class="btn-text">Сумма</span>
+                </button>
+                
+                <button class="operation-btn" data-operation="subtract">
+                    <span class="btn-icon">➖</span>
+                    <span class="btn-text">Разность</span>
+                </button>
+                
+                <button class="operation-btn" data-operation="multiply">
+                    <span class="btn-icon">✖️</span>
+                    <span class="btn-text">Произведение</span>
+                </button>
+                
+                <button class="operation-btn" data-operation="divide">
+                    <span class="btn-icon">➗</span>
+                    <span class="btn-text">Деление</span>
+                </button>
+            </div>
+
+            <div class="result-section">
+                <h3 class="result-title">Результат:</h3>
+                <div id="result" class="result-display">
+                    <span class="result-placeholder">Здесь появится результат вычислений</span>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <h3 class="history-title">История операций</h3>
+                <div id="history" class="history-list">
+                    <div class="history-empty">Операции будут отображаться здесь</div>
+                </div>
+                <button id="clearHistory" class="clear-btn">Очистить историю</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Интерактивный калькулятор &copy; 2024</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
