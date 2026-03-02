@@ -1,4 +1,4 @@
-class Calculator {
+class Calculator  {
     constructor() {
         this.initializeElements();
         this.bindEvents();
